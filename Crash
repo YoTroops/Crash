@@ -1,0 +1,166 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 5/9/22 4:11 PM
+Description: Ticking screen
+
+java.lang.NullPointerException: Ticking screen
+	at com.ldtteam.blockout.controls.AbstractTextElement.lambda$isTextEmpty$1(AbstractTextElement.java:489) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement$$Lambda$8258/1434507848.test(Unknown Source) ~[?:?] {}
+	at java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[?:1.8.0_51] {}
+	at java.util.Collections$2.tryAdvance(Collections.java:4717) ~[?:1.8.0_51] {}
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:529) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:516) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:502) ~[?:1.8.0_51] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[?:1.8.0_51] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_51] {}
+	at java.util.stream.ReferencePipeline.allMatch(ReferencePipeline.java:454) ~[?:1.8.0_51] {}
+	at com.ldtteam.blockout.controls.AbstractTextElement.isTextEmpty(AbstractTextElement.java:489) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.recalcTextRendering(AbstractTextElement.java:190) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:439) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:449) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:444) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.minecolonies.coremod.client.gui.modules.FarmerFieldsModuleWindow$2.updateElement(FarmerFieldsModuleWindow.java:226) ~[?:1.16.5-1.0.712-ALPHA] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingListContainer.refreshElementPanes(ScrollingListContainer.java:54) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingList.refreshElementPanes(ScrollingList.java:80) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingList.onUpdate(ScrollingList.java:87) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.View$$Lambda$8282/1205232478.accept(Unknown Source) ~[?:?] {}
+	at java.util.ArrayList.forEach(ArrayList.java:1249) ~[?:1.8.0_51] {}
+	at com.ldtteam.blockout.views.View.onUpdate(View.java:243) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.minecolonies.coremod.client.gui.modules.FarmerFieldsModuleWindow.onUpdate(FarmerFieldsModuleWindow.java:257) ~[?:1.16.5-1.0.712-ALPHA] {re:classloading}
+	at com.ldtteam.blockout.BOScreen.func_231023_e_(BOScreen.java:252) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at net.minecraft.client.Minecraft.lambda$tick$20(Minecraft.java:1452) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft$$Lambda$5047/1858665047.run(Unknown Source) ~[?:?] {}
+	at net.minecraft.client.gui.screen.Screen.func_231153_a_(Screen.java:427) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1451) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:954) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:607) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$462/817018735.call(Unknown Source) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.ldtteam.blockout.controls.AbstractTextElement.lambda$isTextEmpty$1(AbstractTextElement.java:489) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement$$Lambda$8258/1434507848.test(Unknown Source) ~[?:?] {}
+	at java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[?:1.8.0_51] {}
+	at java.util.Collections$2.tryAdvance(Collections.java:4717) ~[?:1.8.0_51] {}
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:529) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:516) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:502) ~[?:1.8.0_51] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[?:1.8.0_51] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[?:1.8.0_51] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_51] {}
+	at java.util.stream.ReferencePipeline.allMatch(ReferencePipeline.java:454) ~[?:1.8.0_51] {}
+	at com.ldtteam.blockout.controls.AbstractTextElement.isTextEmpty(AbstractTextElement.java:489) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.recalcTextRendering(AbstractTextElement.java:190) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:439) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:449) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.controls.AbstractTextElement.setText(AbstractTextElement.java:444) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.minecolonies.coremod.client.gui.modules.FarmerFieldsModuleWindow$2.updateElement(FarmerFieldsModuleWindow.java:226) ~[?:1.16.5-1.0.712-ALPHA] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingListContainer.refreshElementPanes(ScrollingListContainer.java:54) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingList.refreshElementPanes(ScrollingList.java:80) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.ScrollingList.onUpdate(ScrollingList.java:87) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.ldtteam.blockout.views.View$$Lambda$8282/1205232478.accept(Unknown Source) ~[?:?] {}
+	at java.util.ArrayList.forEach(ArrayList.java:1249) ~[?:1.8.0_51] {}
+	at com.ldtteam.blockout.views.View.onUpdate(View.java:243) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at com.minecolonies.coremod.client.gui.modules.FarmerFieldsModuleWindow.onUpdate(FarmerFieldsModuleWindow.java:257) ~[?:1.16.5-1.0.712-ALPHA] {re:classloading}
+	at com.ldtteam.blockout.BOScreen.func_231023_e_(BOScreen.java:252) ~[?:1.16.5-1.0.392-RELEASE] {re:classloading}
+	at net.minecraft.client.Minecraft.lambda$tick$20(Minecraft.java:1452) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft$$Lambda$5047/1858665047.run(Unknown Source) ~[?:?] {}
+-- Affected screen --
+Details:
+	Screen name: com.ldtteam.blockout.BOScreen
+Stacktrace:
+	at net.minecraft.client.gui.screen.Screen.func_231153_a_(Screen.java:427) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Tro0ps'/105, l='ClientLevel', x=-448.66, y=71.00, z=-134.82]]
+	Chunk stats: Client Chunk Cache: 1225, 922
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-186,63,45), Chunk: (at 6,3,13 in -12,2; contains blocks -192,0,32 to -177,255,47), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 304964 game time, 3977 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.func_72914_a(ClientWorld.java:447) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2031) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:623) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$462/817018735.call(Unknown Source) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 743708560 bytes (709 MB) / 2147483648 bytes (2048 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 20
+	JVM Flags: 10 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -XX:+IgnoreUnrecognizedVMOptions -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.34.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.34
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		forge-1.16.5-36.2.34-client.jar                   |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: NOSIGNATURE
+		structurize-1.16.5-1.0.392-RELEASE.jar            |Structurize                   |structurize                   |1.16.5-1.0.392-RELEA|DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.34-universal.jar                |Forge                         |forge                         |36.2.34             |DONE      |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		minecolonies-1.16.5-1.0.712-ALPHA.jar             |MineColonies                  |minecolonies                  |1.16.5-1.0.712-ALPHA|DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 870f2c03-31db-435f-823f-1b3c0121d57c
+	Launched Version: 1.16.5-forge-36.2.34
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2 GL version 4.6.0 NVIDIA 512.15, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla
+	Current Language: English (US)
+	CPU: 20x Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz
